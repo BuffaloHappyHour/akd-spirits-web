@@ -24,7 +24,7 @@ export default function ContactPage() {
               <p className="text-[0.65rem] uppercase tracking-[0.12em] text-cream-faint">
                 Email
               </p>
-              <p className="mt-1 text-cream">hello@akdspirits.com</p>
+              <p className="mt-1 text-cream">contact@akdspirits.com</p>
             </div>
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.12em] text-cream-faint">

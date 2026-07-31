@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import FounderAvatar from "@/components/FounderAvatar";
 
 export const metadata: Metadata = {
   title: "Our Story | AKD Spirits",
@@ -16,11 +17,11 @@ export default function OurStoryPage() {
           </h1>
           <p className="mt-8 text-lg leading-relaxed text-cream-dim">
             Derek Accurso, Mike Kelly, and Tony DeYoung have spent the better
-            part of the last decade &mdash; separately and together &mdash;
-            immersed in whiskey: tasting it, teaching it, selling it, and
-            arguing about it over a shared glass. AKD Spirits is what happens
-            when three people who built their own platforms for talking about
-            whiskey decide to start bottling it themselves.
+            part of the last decade, separately and together, immersed in
+            whiskey: tasting it, teaching it, selling it, and arguing about it
+            over a shared glass. AKD Spirits is what happens when three
+            people who built their own platforms for talking about whiskey
+            decide to start bottling it themselves.
           </p>
         </div>
       </section>
@@ -34,19 +35,22 @@ export default function OurStoryPage() {
               initials="DA"
               name="Derek Accurso"
               role="Co-Founder"
-              bio="Derek is a certified whiskey professional who has spent years building Neat Notes, a home for tasting notes and whiskey education, alongside hosting conversations with the whiskey community through Buffalo Happy Hour. His palate is built on structure &mdash; he wants a whiskey that can explain itself, pour after pour."
+              photo="/images/founders/derek-accurso.png"
+              bio="Derek is a certified scotch professional and executive bourbon steward who co-founded Neat Notes, a whiskey intelligence platform and tasting journal. Derek also co-founded Buffalo Happy Hour, a multimedia production company focused on whiskey, education, and video production. Derek prefers dark, fruit-forward finished whiskey, whether that's bourbon or scotch."
             />
             <FounderBio
               initials="MK"
               name="Mike Kelly"
               role="Co-Founder"
-              bio="Mike co-built Buffalo Happy Hour and Neat Notes with Derek, and has spent that same stretch of years behind the bar, behind the mic, and behind the tasting table. He's the one who insists a whiskey earn its price before it earns a name."
+              photo="/images/founders/mike-kelly.png"
+              bio="Mike is an executive bourbon steward and the other co-founder of both Neat Notes and Buffalo Happy Hour. Throughout the years, Mike has had a passion for the marketing and sales side of whiskey, including the purchasing decisions of consumers. Mike prefers a full-bodied, nutty bourbon at all levels of proof."
             />
             <FounderBio
               initials="TD"
               name="Tony DeYoung"
-              role="Co-Founder, Three Chord Bourbon"
-              bio="Tony brings Three Chord Bourbon's ear for a well-composed pour &mdash; someone who has spent years sourcing, blending, and talking about whiskey with the same discipline he'd bring to a set list. He's the tie-breaker when Derek and Mike can't agree on a barrel."
+              role="Co-Founder"
+              photo="/images/founders/tony-deyoung.png"
+              bio="Tony is a WSET II certified whiskey professional with over 20 years of experience in the industry. Tony has extensive knowledge in brand development and whiskey blending, which has helped a number of the companies he's worked for find success. Tony prefers higher-proof finished whiskey that still holds true to traditional tasting profiles."
             />
           </div>
         </div>
@@ -61,11 +65,11 @@ export default function OurStoryPage() {
           </h2>
           <div className="mt-8 space-y-6 text-base leading-relaxed text-cream-dim">
             <p>
-              AKD Spirits Ltd. is intentionally separate from Buffalo Happy
-              Hour, Neat Notes, and Three Chord Bourbon. Those platforms
-              taught us how to talk about whiskey and who to talk about it
-              with. This company exists to do something different: put our
-              names behind bottles we chose ourselves.
+              AKD Spirits Ltd. is intentionally separate from the platforms
+              and ventures each of us built before. Those projects taught us
+              how to talk about whiskey and who to talk about it with. This
+              company exists to do something different: put our names behind
+              bottles we chose ourselves.
             </p>
             <p>
               As a non-distiller producer, we don&rsquo;t operate a still.
@@ -86,18 +90,18 @@ function FounderBio({
   initials,
   name,
   role,
+  photo,
   bio,
 }: {
   initials: string;
   name: string;
   role: string;
+  photo?: string;
   bio: string;
 }) {
   return (
     <div className="grid gap-6 sm:grid-cols-[auto_1fr] sm:gap-10">
-      <div className="flex h-14 w-14 items-center justify-center rounded-full border border-gold-dim font-mono text-base text-gold-bright">
-        {initials}
-      </div>
+      <FounderAvatar initials={initials} name={name} photo={photo} size={56} />
       <div>
         <p className="font-display text-2xl text-cream">{name}</p>
         <p className="eyebrow mt-1">{role}</p>

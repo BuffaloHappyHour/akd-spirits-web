@@ -32,7 +32,7 @@ export default function ContactForm() {
       <div className="rounded-sm border border-gold-dim bg-bg-panel-raised p-8">
         <p className="font-display text-xl text-cream">Message sent.</p>
         <p className="mt-2 text-sm text-cream-dim">
-          Thanks for reaching out &mdash; we&rsquo;ll get back to you soon.
+          Thanks for reaching out. We&rsquo;ll get back to you soon.
         </p>
       </div>
     );

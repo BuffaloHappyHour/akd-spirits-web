@@ -1,5 +1,6 @@
 import Link from "next/link";
 import LedgerTag from "@/components/LedgerTag";
+import FounderAvatar from "@/components/FounderAvatar";
 
 export default function Home() {
   return (
@@ -15,7 +16,7 @@ export default function Home() {
           }}
         />
         <div className="relative mx-auto max-w-6xl px-6 py-24 sm:px-10 sm:py-32">
-          <p className="eyebrow">Non-Distiller Producer &mdash; Est. 2026</p>
+          <p className="eyebrow">Non-Distiller Producer · Est. 2026</p>
           <h1 className="mt-6 max-w-3xl font-display text-5xl leading-[1.08] text-cream sm:text-7xl">
             Three palates.
             <br />
@@ -60,7 +61,7 @@ export default function Home() {
             />
             <ApproachItem
               title="Taste"
-              body="Three certified, working palates &mdash; sharpened by years of teaching, judging, and selling whiskey &mdash; have to agree before a barrel becomes a release."
+              body="Three certified, working palates, sharpened by years of teaching, judging, and selling whiskey, have to agree before a barrel becomes a release."
             />
             <ApproachItem
               title="Bottle"
@@ -117,12 +118,19 @@ export default function Home() {
               initials="DA"
               name="Derek Accurso"
               role="Co-Founder"
+              photo="/images/founders/derek-accurso.png"
             />
-            <FounderCard initials="MK" name="Mike Kelly" role="Co-Founder" />
+            <FounderCard
+              initials="MK"
+              name="Mike Kelly"
+              role="Co-Founder"
+              photo="/images/founders/mike-kelly.png"
+            />
             <FounderCard
               initials="TD"
               name="Tony DeYoung"
-              role="Co-Founder, Three Chord Bourbon"
+              role="Co-Founder"
+              photo="/images/founders/tony-deyoung.png"
             />
           </div>
 
@@ -154,16 +162,16 @@ function FounderCard({
   initials,
   name,
   role,
+  photo,
 }: {
   initials: string;
   name: string;
   role: string;
+  photo?: string;
 }) {
   return (
     <div className="rounded-sm border border-line p-6">
-      <div className="flex h-12 w-12 items-center justify-center rounded-full border border-gold-dim font-mono text-sm text-gold-bright">
-        {initials}
-      </div>
+      <FounderAvatar initials={initials} name={name} photo={photo} size={48} />
       <p className="mt-5 font-display text-lg text-cream">{name}</p>
       <p className="mt-1 text-sm text-cream-dim">{role}</p>
     </div>

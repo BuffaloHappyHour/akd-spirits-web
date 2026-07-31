@@ -37,7 +37,7 @@ export default function Footer() {
           <div>
             <p className="eyebrow mb-3">Correspondence</p>
             <p className="text-sm text-cream-dim">
-              hello@akdspirits.com
+              contact@akdspirits.com
             </p>
             <p className="mt-1 text-sm text-cream-dim">
               Buffalo, New York

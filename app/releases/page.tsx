@@ -39,8 +39,8 @@ export default function ReleasesPage() {
           Every release, logged like it left the rickhouse.
         </h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-cream-dim">
-          We&rsquo;re a young company &mdash; our first barrels are still
-          being selected and tasted. Here&rsquo;s what&rsquo;s in progress.
+          We&rsquo;re a young company. Our first barrels are still being
+          selected and tasted. Here&rsquo;s what&rsquo;s in progress.
           Full tasting notes, mash bills, and proof will be added as each
           release is finalized.
         </p>
